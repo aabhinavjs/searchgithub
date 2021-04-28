@@ -24,7 +24,6 @@ export default function Home(props) {
   const [appUserRepoData,setAppUserRepoData] = useState(repoData);
 
   useEffect(() => {
-      debugger
     if(Object.keys(userData).length !== 0){
         setAppUserData(userData);
     }

@@ -1,6 +1,8 @@
 import React,{useState} from 'react';
 import PropTypes from 'prop-types';
 import DetailDialog from "../components/DetailsDialog";
+import RepoInfo from "./RepoInfo";
+import Grid from '@material-ui/core/Grid';
 
 export default function Repos(props){
     const [seeDetail,setSeeDetail] = useState(false);
@@ -14,14 +16,12 @@ export default function Repos(props){
                 onClose={()=>setSeeDetail(false)}
             />
         )}
-        <ul className="repo-list">
+       
             {props.repos.map(repo => (
-                <li key={repo.id} onClick={()=>{setSeeDetail(true); setDetail(repo)}}>
-                    <h3>{repo.name}</h3>
-                    <p>{repo.description}</p>
-                </li>
+                <Grid container spacing={1}>
+                    <RepoInfo repoName={repo.name} repoDescription={repo.description} knowMoreHandler={()=>{setSeeDetail(true); setDetail(repo)}}/>
+                </Grid>
             ))}
-        </ul>
         </>
         
     );

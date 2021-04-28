@@ -1,4 +1,7 @@
 
+.main-container {
+  overflow: hidden;
+}
 .evs-ul-userdetails {
     margin: 0px 0px 10px 0px;
     padding: 0px;
@@ -18,6 +21,19 @@
     margin: 10px 0px 0px 0px;
     padding: 0px;
     list-style: none;
+  }
+
+  .repo-list {
+    list-style: none;
+  }
+
+  .user-data-container {
+    text-align: center;
+  }
+
+  .search-span-block {
+    text-align: center;
+    padding: 20px;
   }
 
 
